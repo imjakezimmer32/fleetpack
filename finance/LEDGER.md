@@ -3,6 +3,7 @@
 **Venture start:** 2026-09-12  
 **5-week reevaluate:** 2026-10-17  
 **Currency:** USD  
+**Pricing:** Priced for the AI age — built with AI help, so you pay less.  
 **Sleeve cap:** $100 (venture fleet)  
 **Remaining:** $100  
 
@@ -24,7 +25,7 @@
 ## SKUs
 | SKU | Name | Price | Status |
 |-----|------|------:|--------|
-| FP-01 | Agent Ops Research Brief | $29 | Built, not listed |
+| FP-01 | Agent Ops Research Brief | $9 | Built, not listed |
 
 ## Transactions
 | ID | Date | Type | Amount | Category | Description |

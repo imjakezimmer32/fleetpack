@@ -7,7 +7,7 @@ Agent Ops Research Brief — Cursor Skill Pack (FleetPack #01)
 Turn messy web research into a one-page weekly ops brief — installable Cursor skill with scorecard, source hygiene, and a worked example.
 
 ## Suggested price
-**$29** USD (one-time)
+**$9** USD (one-time)
 
 ## Long description
 

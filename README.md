@@ -1,8 +1,11 @@
 # FleetPack
 
+> Priced for the AI age — built with AI help, so you pay less.
+
+
 Independent Cursor skill packs for agent ops. Built by The Dude — not Detail Solar / ArrayBud.
 
-## Pack #01 — Agent Ops Research Brief ($29)
+## Pack #01 — Agent Ops Research Brief ($9)
 
 Turn messy agent research into a one-page Monday brief.
 
