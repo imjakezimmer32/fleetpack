@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FleetPack — Agent Ops Research Brief (Pack #01)</title>
+  <meta name="description" content="Turn agent research dumps into a one-page Monday brief. FleetPack Pack #01 — $29." />
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #171a21;
+      --border: #2a2f3a;
+      --text: #e8eaed;
+      --muted: #9aa0a6;
+      --accent: #6ee7b7;
+      --accent-dim: #34d399;
+      --radius: 10px;
+      --max: 720px;
+      --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .brand strong { color: var(--text); letter-spacing: 0.02em; }
+    .brand span { color: var(--muted); font-size: 0.85rem; }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+      text-align: left;
+    }
+    .pack-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dim);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.35rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+      max-width: 36em;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.85rem 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.35rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .btn:hover { text-decoration: none; }
+    .btn-primary {
+      background: var(--accent);
+      color: #0a0c0f;
+    }
+    .btn-primary:hover { background: var(--accent-dim); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover {
+      border-color: var(--muted);
+      background: var(--surface);
+    }
+    .checkout-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+    }
+    section h2 {
+      font-size: 1.25rem;
+      font-weight: 650;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .card-list {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .card-list li {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+    }
+    .card-list strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 0.95rem;
+    }
+    .card-list p, .card-list span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .audience {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .audience ul {
+      margin: 0.75rem 0 0 1.15rem;
+      color: var(--text);
+    }
+    .audience li { margin-bottom: 0.4rem; }
+
+    .steps {
+      list-style: none;
+      counter-reset: step;
+      display: grid;
+      gap: 0.85rem;
+    }
+    .steps li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.85rem;
+      align-items: start;
+    }
+    .steps li::before {
+      content: counter(step);
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .steps strong { display: block; font-size: 0.95rem; }
+    .steps span { color: var(--muted); font-size: 0.9rem; }
+
+    /* FAQ */
+    details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      margin-bottom: 0.65rem;
+      padding: 0.9rem 1.1rem;
+    }
+    details summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after {
+      content: "+";
+      float: right;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    details[open] summary::after { content: "−"; }
+    details p {
+      margin-top: 0.65rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0 2.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer .brand-line { margin-bottom: 0.35rem; color: var(--text); }
+    footer .price { margin-top: 0.75rem; }
+
+    @media (max-width: 480px) {
+      .hero { padding-top: 2.5rem; }
+      .cta-row { flex-direction: column; align-items: stretch; }
+      .btn { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <strong>FleetPack</strong>
+        <span>/ The Dude</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero wrap">
+      <span class="pack-label">Pack #01</span>
+      <h1>Agent Ops Research Brief</h1>
+      <p class="tagline">Turn agent research dumps into a one-page Monday brief.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#">Buy — $29</a>
+        <a class="btn btn-secondary" href="./preview.html">Preview the example brief</a>
+      </div>
+      <p class="checkout-note">Checkout link lands when Polar is connected</p>
+    </div>
+
+    <section id="included">
+      <div class="wrap">
+        <h2>What's included</h2>
+        <ul class="card-list">
+          <li>
+            <strong>Brief template</strong>
+            <p>A one-page structure for turning agent research dumps into a Monday-ready brief.</p>
+          </li>
+          <li>
+            <strong>Agent Ops prompts</strong>
+            <p>Ready-to-use prompts that extract decisions, risks, and next steps from raw research.</p>
+          </li>
+          <li>
+            <strong>Install notes</strong>
+            <p>Short setup guidance so you can drop the pack into your existing agent workflow.</p>
+          </li>
+          <li>
+            <strong>Example brief</strong>
+            <p>A filled-in sample you can open and adapt before your first run.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="who">
+      <div class="wrap">
+        <h2>Who it's for</h2>
+        <div class="audience">
+          <p>Built for people who already run agents and need a clean weekly readout—not another dashboard.</p>
+          <ul>
+            <li>Operators who review agent research before Monday standups</li>
+            <li>Founders and leads who want signal without reading every dump</li>
+            <li>Anyone packaging agent output into a shareable one-pager</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <div class="wrap">
+        <h2>How install works</h2>
+        <ol class="steps">
+          <li>
+            <div>
+              <strong>Get the pack</strong>
+              <span>Purchase Pack #01 and download the files.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Drop it in</strong>
+              <span>Place the template and prompts next to your agent research folder.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Run the brief</strong>
+              <span>Point your agent at a research dump, fill the template, ship the one-pager.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <details>
+          <summary>What do I need to use this pack?</summary>
+          <p>An agent workflow that can produce research dumps (notes, logs, or exports), and a place to store a simple markdown or text brief. No special platform required.</p>
+        </details>
+        <details>
+          <summary>Is this a hosted product or a download?</summary>
+          <p>Pack #01 is a downloadable pack: templates, prompts, and install notes you use in your own setup. Checkout will be handled via Polar once connected.</p>
+        </details>
+        <details>
+          <summary>Can I customize the brief format?</summary>
+          <p>Yes. The template is meant to be edited—keep the one-page constraint and reshape sections to match how your team reviews work.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="brand-line"><strong>FleetPack</strong> / The Dude</p>
+      <p>Agent Ops Research Brief — Pack #01</p>
+      <p class="price">$29 · Checkout link lands when Polar is connected</p>
+    </div>
+  </footer>
+</body>
+</html>
