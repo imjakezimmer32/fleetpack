@@ -1,0 +1,48 @@
+{
+  "venture": "FleetPack",
+  "currency": "USD",
+  "started": "2026-09-12",
+  "reevaluate_on": "2026-10-17",
+  "cadence": {
+    "weekly_ship": "Every Monday 9:00 local \u2014 ship product/marketing, update ledger",
+    "week5_review": "After 5 weeks \u2014 kill/continue/pivot based on P&L"
+  },
+  "opening_balances": {
+    "cash": 0.0,
+    "notes": "Sleeve cap $100. Polar seller pending. No capital spent yet."
+  },
+  "totals": {
+    "revenue": 0.0,
+    "cogs": 0.0,
+    "expenses": 0.0,
+    "net": 0.0
+  },
+  "transactions": [
+    {
+      "id": "txn-0001",
+      "date": "2026-09-12",
+      "type": "meta",
+      "amount": 0.0,
+      "category": "setup",
+      "description": "Ledger opened. Venture start. Product Pack #01 built; not yet sold.",
+      "account": "ledger",
+      "balance_after": 0.0
+    }
+  ],
+  "weekly_snapshots": [],
+  "sku_catalog": [
+    {
+      "sku": "FP-01",
+      "name": "Agent Ops Research Brief",
+      "price": 29.0,
+      "status": "built_not_listed"
+    }
+  ],
+  "sleeve": {
+    "id": "v-001-fleetpack",
+    "cap_usd": 100.0,
+    "spent_usd": 0.0,
+    "remaining_usd": 100.0,
+    "portfolio": "/workspace/ventures/portfolio.json"
+  }
+}
