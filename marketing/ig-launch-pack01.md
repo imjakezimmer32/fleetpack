@@ -41,3 +41,9 @@ Link: jakesarcade.app (or fleetpack landing when hosted)
 
 ## Pricing line (required)
 Priced for the AI age — built with AI help, so you pay less.
+
+
+## Live checkout (Solana USDC)
+Address: `A37WYWZnbi85524d52hzTQB6o7vZuyoy56had5ZTr7Dw`
+Price: 9 USDC · memo `FP-01`
+Priced for the AI age — built with AI help, so you pay less.
