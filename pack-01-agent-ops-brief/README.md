@@ -1,7 +1,9 @@
 # Pack #01 — Agent Ops Research Brief
 
+> Priced for the AI age — built with AI help, so you pay less.
+
 **FleetPack** · Digital product for Cursor agents  
-**Price (suggested):** $29 · **License:** Simple commercial (see below)
+**Price:** $9 USDC (Solana) · **License:** Simple commercial (see below)
 
 ---
 
@@ -13,7 +15,7 @@ You get:
 - Source hygiene rules (no rumor dumps)
 - A forced scorecard so priorities aren't vibes
 - A fixed one-page deliverable format your team can standardize on
-- A fully worked example brief so you see the output before you buy… wait — you already bought. Open `EXAMPLE-BRIEF.md`.
+- A fully worked example brief so you see the output shape before you run it. Open `EXAMPLE-BRIEF.md`.
 
 The Dude's take: most "research" from agents is a pile of links. This pack makes the pile into a decision.
 
@@ -93,5 +95,5 @@ No warranty. Ships as-is. If it saves you an hour a week, The Dude did his job.
 ## Support / vibe
 
 FleetPack builds small, sharp agent packs — not bloated courseware.  
-Questions about this pack: use whatever channel you bought from.  
+Buy: 9 USDC on Solana (see `landing/BUY-USDC.md`).  
 Keep the brief to one page. That's the whole product philosophy.
